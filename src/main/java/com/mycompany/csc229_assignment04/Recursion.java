@@ -7,40 +7,40 @@ public class Recursion extends Main {
     public static void helloWorld(int n){
         System.out.println("Hello World!");
         
-        if (n <= 1){
+        if (n <= 1){ //base case
             return;
         }
         else{
-            helloWorld(n - 1);
+            helloWorld(n - 1); //counts down until base case is reached
         }
     }
     
     public static int sumSeven(int n1, int n2){      
-       if (n1 > n2){
+       if (n1 > n2){ //base case
            return 0;
         }
-       else if (n1 % 7 == 0) {
-           return n1 + sumSeven(n1+1, n2);    
+       else if (n1 % 7 == 0) { //checks if n1 is multiple of 7
+           return n1 + sumSeven(n1+1, n2);    // adds n1 and increments up
        }
        else{
-           return sumSeven(n1+1, n2);
+           return sumSeven(n1+1, n2); //increments up
        }
     }
 
     public static int recursiveBinarySearch(int[] arr, int l, int r, int target){
-        if (l > r){
+        if (l > r){ //base case
             return -1;
         }
         
-        int mid = l + (r - l) / 2;
+        int mid = l + (r - l) / 2; //gets middle
         
-        if (arr[mid] == target) {
+        if (arr[mid] == target) { //if target is middle return middle
             return mid;
         }
-        else if (arr[mid] < target) {
+        else if (arr[mid] < target) { //if target is greater than middle search the right
             return recursiveBinarySearch(arr, mid + 1, r, target);
         }
-        else {
+        else { //target less than middle search the left
             return recursiveBinarySearch(arr, l, mid - 1, target);
         }
     }

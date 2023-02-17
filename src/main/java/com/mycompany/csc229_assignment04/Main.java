@@ -8,9 +8,9 @@ import java.util.Scanner;
  */
 public class Main{
     public static void main(String[] args){
-        Recursion driver = new Recursion();
+        Recursion driver = new Recursion(); //creates object to access methods
         
-        System.out.println("Make Selection: ");
+        System.out.println("Make Selection: "); //menu
         System.out.println("1 - Hello World");
         System.out.println("2 - Sum of multiples of 7");
         System.out.println("3 - Recursive Binary Search");
@@ -18,7 +18,7 @@ public class Main{
         System.out.println("5 - GCD");
         System.out.println("6 - Fibonacci Sequence + Run Time Analysis");
         
-        Scanner choice = new Scanner(System.in);
+        Scanner choice = new Scanner(System.in); //menu input
         int pick = choice.nextInt();
         System.out.println(" ");
         
